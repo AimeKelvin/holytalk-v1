@@ -1,0 +1,32 @@
+{
+  "name": "holytalk",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "mobile",
+    "server",
+    "packages/*",
+    "scripts"
+  ],
+  "scripts": {
+    "server_dev": "npm --workspace server run dev",
+    "server_build": "npm --workspace server run build",
+    "mobile_dev": "npm --workspace mobile run dev",
+    "seed_bible": "npm --workspace scripts run seed-bible",
+    "build_embeddings": "npm --workspace scripts run build-embeddings",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "typecheck": "tsc -b",
+    "prepare": "husky install"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.5",
+    "eslint": "^9.12.0",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.1.6",
+    "prettier": "^3.3.3",
+    "typescript": "^5.6.2"
+  }
+}
